@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.template.loader import render_to_string
 
 from lists.views import home_page
-from list.models import Item
+from lists.models import Item
 
 # Create your tests here.
 class HomePageTest(TestCase):
@@ -29,7 +29,7 @@ class ItemModelTest(TestCase):
         second_item.text = 'Item the second'
         second_item.save()
 
-        saved_items = Item.objetcs.all()
+        saved_items = Item.objects.all()
         self.assertEqual(saved_items.count(), 2)
 
         first_saved_item = saved_items[0]
