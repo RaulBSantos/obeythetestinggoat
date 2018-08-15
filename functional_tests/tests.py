@@ -27,6 +27,7 @@ class NewVisitorTest(LiveServerTestCase):
                     raise e
                 time.sleep(0.5)
 
+    # NOTE: FT #1
     def test_can_start_a_list_for_one_user(self):
         # Edith has heard about a cool new online to-fo app. She goes
         # to check out its homepage
@@ -73,6 +74,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Satisfied, she goes back to sleep
 
+    # NOTE: FT #2
     def test_multiple_users_can_start_lists_at_different_urls(self):
         # Edith starts a new to-do list
         self.browser.get(self.live_server_url)
