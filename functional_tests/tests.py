@@ -6,6 +6,7 @@ import time
 
 MAX_WAIT = 10
 
+
 class NewVisitorTest(LiveServerTestCase):
 
     def setUp(self):
@@ -64,7 +65,8 @@ class NewVisitorTest(LiveServerTestCase):
         # rows = table.find_elements_by_tag_name('tr')
         # The page updates again, and now shows both items on her lists
         self.wait_for_row_in_list_table('1: Buy peacock feathers')
-        self.wait_for_row_in_list_table('2: Use peacock feathers to make a fly')
+        self.wait_for_row_in_list_table(
+            '2: Use peacock feathers to make a fly')
 
         # Edith wonders wheter the site will remember her list. Then she sees
         # that the site has generated a unique URL for her -- there is some
@@ -89,8 +91,8 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Now a new user, Francis, comes along to the saved_items
 
-        ## Let's open into new browser's section to avoid problems
-        ## with cookies from last user's iteration
+        # Let's open into new browser's section to avoid problems
+        # with cookies from last user's iteration
 
         self.browser.quit()
         self.browser = webdriver.Firefox()
@@ -118,8 +120,6 @@ class NewVisitorTest(LiveServerTestCase):
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Buy peacock feathers', page_text)
         self.assertIn('Buy milk', page_text)
-
         # Satisfied, they both go back to sleep
-
 
         # self.fail('Finish the test!')
