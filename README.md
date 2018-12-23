@@ -1,3 +1,5 @@
+migrado com todo o histórico para [projeto de estudos](https://github.com/raulbolsantos/estudos/tree/obeythetestinggoat)
+
 # obeythetestinggoat
 Workspace para seguir o livro "Obey The Testing Goat" - Obedeça a Cabra de Teste.
 
